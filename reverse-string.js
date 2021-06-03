@@ -11,4 +11,4 @@ var reverseString = (inputString) => {
   return reversedString;
 }
 
-console.log(reverseString(inputString))
+console.log(reverseString(inputString));
