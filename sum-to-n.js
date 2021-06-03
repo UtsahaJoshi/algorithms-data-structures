@@ -8,4 +8,7 @@ var sumUpTo = (n) => {
   return total;
 }
 
-console.log(sumUpTo(10));
+let t1 = new Date();
+console.log(sumUpTo(1000000000));
+let t2 = new Date();
+console.log(`Time Elapsed: ${(t2-t1)/1000}`);
