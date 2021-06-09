@@ -22,6 +22,7 @@ var countUniqueValues = (numbers) => {
 
 //another solution by manipulating array
 var countUniqueValues2 = (numbers) => {
+  if (numbers.length === 0) return 0;
   var i = 0;
   for (var j = i + 1; j < numbers.length; j++) {
     if (numbers[i] !== numbers[j]) {
@@ -29,6 +30,7 @@ var countUniqueValues2 = (numbers) => {
       numbers[i] = numbers[j];
     }
   }
+  return i + 1;
 }
 
 console.log(countUniqueValues(numbers))
