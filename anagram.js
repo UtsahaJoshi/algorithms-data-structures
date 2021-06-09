@@ -6,6 +6,7 @@ var anagram = (word, word2) => {
     return false;
   }
 
+  //implementation of frequency counter
   var frequencyCounter1 = {};
   var frequencyCounter2 = {};
 
@@ -16,6 +17,7 @@ var anagram = (word, word2) => {
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
   }
 
+  // check if number of letter in word is equal to number of the same letter in word2
   for (var key in frequencyCounter1) {
     if (frequencyCounter1[key] !== frequencyCounter2[key]) {
       return false;
