@@ -1,11 +1,11 @@
-var word = "hellothere";
+var setOfChars = "hellothere";
 
 // using frequency counter O(n) solution 
-var longestUniqueCharacters = (word) => {
+var longestUniqueCharacters = (setOfChars) => {
   var longestUniqueCharsTemp = "";
   var longestUniqueChars = "";
   var frequencyCounter = {};
-  for (val of word) {
+  for (val of setOfChars) {
     frequencyCounter[val] = (frequencyCounter[val] || 0) + 1;
     if (frequencyCounter[val] > 1) {
       if (longestUniqueChars.length < longestUniqueCharsTemp.length) {
@@ -20,10 +20,10 @@ var longestUniqueCharacters = (word) => {
 }
 
 // using .includes O(n^2) solution 
-var longestUniqueCharacters2 = (word) => {
+var longestUniqueCharacters2 = (setOfChars) => {
   var longestUniqueCharsTemp = "";
   var longestUniqueChars = "";
-  for (val of word) {
+  for (val of setOfChars) {
     if (longestUniqueCharsTemp.includes(val)) {
       if (longestUniqueChars.length < longestUniqueCharsTemp.length) {
         longestUniqueChars = longestUniqueCharsTemp;
@@ -35,5 +35,5 @@ var longestUniqueCharacters2 = (word) => {
   return longestUniqueChars;
 }
 
-console.log(longestUniqueCharacters(word))
-console.log(longestUniqueCharacters2(word))
+console.log(longestUniqueCharacters(setOfChars))
+console.log(longestUniqueCharacters2(setOfChars))
