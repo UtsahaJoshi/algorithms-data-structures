@@ -9,12 +9,11 @@ var maxSubArraySum = (array, n) => {
   if (array.length < n) return null;
   var maxSum = -Infinity;
   for(var i = 0; i < (array.length - n); i++) {
-    var sum = 0;
+    var tempSum = 0;
     for(var j = i; j < (i + n); j++) {
-      sum += array[j];
+      tempSum += array[j];
     }
-    if (sum > maxSum) maxSum = sum;
-
+    maxSum = Math.max(maxSum, tempSum);
   }
   return maxSum;
 }
@@ -31,9 +30,7 @@ var maxSubArraySum2 = (array, n) => {
   tempSum = maxSum;
   for (var j = n; j < array.length; j++){
     tempSum = tempSum - array[j - n] + array[j]
-    if (tempSum >= maxSum) {
-        maxSum = tempSum;
-    }
+    maxSum = Math.max(maxSum, tempSum);
   }
   return maxSum;
 }
