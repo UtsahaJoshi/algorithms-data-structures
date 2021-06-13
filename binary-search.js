@@ -14,6 +14,7 @@ var binarySearch = (array, searchValue) => {
       return mid;
     }
   }
+  return -1;
 }
 
 console.log(binarySearch(array, searchValue));
